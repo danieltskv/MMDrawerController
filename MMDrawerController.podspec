@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MMDrawerController"
-  s.version      = "0.6.0"
+  s.version      = "0.6.1"
   s.summary      = "A lightweight, easy-to-use side drawer navigation controller."
   s.homepage     = "https://github.com/mutualmobile/MMDrawerController"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
