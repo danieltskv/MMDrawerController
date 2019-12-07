@@ -343,6 +343,11 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
         UIViewController * sideDrawerViewController = [self sideDrawerViewControllerForSide:drawerSide];
         if (self.openSide != drawerSide) {
           [self prepareToPresentDrawer:drawerSide animated:animated];
+		
+	  // iOS 8 workaround, table view was jumping down below nav bar after initial appearance
+	  // https://github.com/mutualmobile/MMDrawerController/issues/291
+	  [sideDrawerViewController endAppearanceTransition];
+	  [sideDrawerViewController beginAppearanceTransition:YES animated:animated];
         }
         
         if(sideDrawerViewController){
